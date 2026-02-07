@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eWaste Recycling | AZstRUT </title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom styles for scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
+        /* Custom stroke width for bolder icons */
+        .lucide-bold {
+            stroke-width: 3px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-emerald-600 p-2 rounded-lg">
+                    <i data-lucide="recycle" class="w-6 h-6 text-white"></i>
+                </div>
+                <span id="logo-text" class="text-2xl font-bold tracking-tight text-white transition-colors duration-300">
+                    eWaste<span class="text-emerald-500">Recycling from AZstRUT</span>
+                </span>
+            </div>
+
+            <button id="mobile-menu-btn" class="focus:outline-none">
+                <i id="menu-icon" data-lucide="menu" class="w-8 h-8 text-white transition-colors duration-300"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden bg-white absolute top-full left-0 w-full shadow-lg py-4 px-6 flex flex-col space-y-4">
+            <a href="#home" class="mobile-link text-gray-600 hover:text-blue-600 font-medium block">Home</a>
+            <a href="#acceptance" class="mobile-link text-gray-600 hover:text-blue-600 font-medium block">Accepted Items</a>
+            <a href="#process" class="mobile-link text-gray-600 hover:text-blue-600 font-medium block">How It Works</a>
+            <a href="#prepare" class="mobile-link text-gray-600 hover:text-blue-600 font-medium block">Preparation</a>
+            <a href="#faq" class="mobile-link text-gray-600 hover:text-blue-600 font-medium block">FAQ</a>
+            <a href="#get-involved" class="mobile-link text-gray-600 hover:text-blue-600 font-medium block">Get Involved</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                alt="Green nature and technology" 
+                class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-emerald-900/70"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center md:text-left">
+            <div class="md:w-2/3 lg:w-1/2">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Give Your Electronics a <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Second Life</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                    Convenient, simple e-waste recycling for MCC | Located in the Library
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Acceptance Guide Section -->
+    <section id="acceptance" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">eWaste Recycling Collection Guide</h2>
+                <div class="h-1 w-20 bg-emerald-500 rounded mx-auto"></div>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Please recycle responsibly & use the following guidelines for AZstRUT's eWaste community collection bin at MCC</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Block 1: What You Can Recycle -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-emerald-500">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-emerald-100 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">What You Can Recycle</h3>
+                    </div>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        The e‑waste bin accepts a wide range of consumer electronics and accessories:
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="smartphone" class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                            <span class="text-lg font-bold">Phones & Tablets</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="laptop" class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                            <span class="text-lg font-bold">Laptops & Small Computing</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="plug" class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                            <span class="text-lg font-bold">Chargers, Cables & Adapters</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="keyboard" class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                            <span class="text-lg font-bold">Mice & Keyboards</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="headphones" class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                            <span class="text-lg font-bold">Headphones & Earbuds</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="usb" class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                            <span class="text-lg font-bold">USB Drives & Memory Cards</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="watch" class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                            <span class="text-lg font-bold">Calculators & Smartwatches</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="speaker" class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                            <span class="text-lg font-bold">Small Peripherals</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 pt-6 border-t border-gray-100">
+                        <a href="https://azstrut.org/what-we-take/" target="_blank" class="text-blue-600 font-bold flex items-center gap-1 hover:underline">
+                            Complete list of accepted items <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Block 2: What Cannot Be Recycled -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-red-400">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-red-50 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i data-lucide="alert-octagon" class="w-6 h-6 text-red-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">What Cannot Be Recycled</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed font-medium">
+                        Some items require special handling and should not be placed in the e-waste bin:
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="circle-x" class="w-6 h-6 text-red-500 flex-shrink-0 lucide-bold mt-0.5"></i>
+                            <span class="text-lg font-bold">Batteries</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="circle-x" class="w-6 h-6 text-red-500 flex-shrink-0 lucide-bold mt-0.5"></i>
+                            <span class="text-lg font-bold">Light bulbs</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="circle-x" class="w-6 h-6 text-red-500 flex-shrink-0 lucide-bold mt-0.5"></i>
+                            <span class="text-lg font-bold">Ink or toner cartridges</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="circle-x" class="w-6 h-6 text-red-500 flex-shrink-0 lucide-bold mt-0.5"></i>
+                            <span class="text-lg font-bold">Large electronics <span class="font-normal text-gray-500 text-base">(No CRT monitors! Only Flat Panel Monitors and Screen under 55" are accepted.)</span></span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="circle-x" class="w-6 h-6 text-red-500 flex-shrink-0 lucide-bold mt-0.5"></i>
+                            <span class="text-lg font-bold">Items containing liquids or leaking components</span>
+                        </li>
+                        <li class="flex items-start space-x-4 text-gray-700">
+                            <i data-lucide="circle-x" class="w-6 h-6 text-red-500 flex-shrink-0 lucide-bold mt-0.5"></i>
+                            <span class="text-lg font-bold">Anything too large to fit safely into the bin</span>
+                        </li>
+                    </ul>
+                    <div class="pt-6 border-t border-red-100 text-center">
+                        <p class="text-red-600 font-black text-xl tracking-wide">
+                            Please No Dumping or Scavenging.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Block 3: Personal Equipment Disclaimer -->
+                <div class="lg:col-span-2 bg-blue-50 p-8 rounded-xl border border-blue-200 flex flex-col md:flex-row items-center md:items-start shadow-sm gap-6">
+                    <div class="bg-blue-600 p-4 rounded-full flex-shrink-0 shadow-lg shadow-blue-200">
+                        <i data-lucide="info" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <p class="text-blue-900 text-xl md:text-2xl font-bold leading-tight mb-2">
+                            For Personal Items Only.
+                        </p>
+                        <p class="text-blue-800 text-lg md:text-xl leading-relaxed">
+                            No college equipment in the bin. Contact MCC IT services to remove and recycle campus equipment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">How It Works</h2>
+                <div class="h-1 w-20 bg-emerald-500 rounded mx-auto"></div>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Repurpose your tech and protect the planet—Drop your items in the bin to keep e-waste out of landfills and moving back into the circular economy.</p>
+            </div>
+            
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-100 -translate-y-1/2 z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                    <div class="bg-white p-6 rounded-lg text-center md:text-left group cursor-default">
+                        <div class="w-16 h-16 bg-white border-4 border-emerald-500 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4 font-bold text-2xl text-emerald-600 shadow-lg group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                            <i data-lucide="truck" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Collection</h3>
+                        <p class="text-gray-500 text-sm">Deposit your personal consumer electronics items gently in the bin</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg text-center md:text-left group cursor-default">
+                        <div class="w-16 h-16 bg-white border-4 border-emerald-500 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4 font-bold text-2xl text-emerald-600 shadow-lg group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                            <i data-lucide="hard-drive" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Data Wipe</h3>
+                        <p class="text-gray-500 text-sm">All data storage drives are wiped according to AZstRut Data Privacy policies for community collection sites</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg text-center md:text-left group cursor-default">
+                        <div class="w-16 h-16 bg-white border-4 border-emerald-500 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4 font-bold text-2xl text-emerald-600 shadow-lg group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                            <i data-lucide="recycle" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Sorting</h3>
+                        <p class="text-gray-500 text-sm">Items are carefully dismantled, cleaned and assessed for reuse</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg text-center md:text-left group cursor-default">
+                        <div class="w-16 h-16 bg-white border-4 border-emerald-500 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4 font-bold text-2xl text-emerald-600 shadow-lg group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                            <i data-lucide="globe" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Recovery</h3>
+                        <p class="text-gray-500 text-sm">Materials are responsibly recycled or refurbished</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preparation Section -->
+    <section id="prepare" class="py-20 bg-emerald-900 text-white overflow-hidden relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">How to Prepare Your Device</h2>
+                    <div class="h-1 w-24 bg-emerald-400 rounded mx-auto"></div>
+                    <p class="mt-6 text-xl text-emerald-100">Before dropping off your electronics:</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Instruction 1 -->
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-center hover:bg-white/20 transition-all">
+                        <div class="bg-emerald-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <p class="text-lg leading-relaxed">
+                            <strong>Remove personal data</strong> when possible (factory reset, wipe storage, remove SIM cards)
+                        </p>
+                    </div>
+
+                    <!-- Instruction 2 -->
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-center hover:bg-white/20 transition-all">
+                        <div class="bg-emerald-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="battery" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <p class="text-lg leading-relaxed">
+                            <strong>Remove batteries</strong> when possible
+                        </p>
+                    </div>
+
+                    <!-- Instruction 3 -->
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-center hover:bg-white/20 transition-all">
+                        <div class="bg-emerald-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="hand" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <p class="text-lg leading-relaxed">
+                            <strong>Place items gently</strong> into the bin—do not force large objects
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Background -->
+        <div class="absolute top-0 right-0 -mt-24 -mr-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-24 -ml-24 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                    <div class="h-1 w-20 bg-emerald-500 rounded mx-auto"></div>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Question 1 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            <span class="font-bold text-gray-800">Is it safe to recycle devices with personal data?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-600"></i>
+                        </button>
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            <p class="mb-3">The AZstRUT bin is an open community collection point. So, it is strongly recommended that you remove your data before dropping off personal electronics. Once the items have been collected, AZstRUT follows strict data‑destruction protocols.</p>
+                            <p class="mb-3">See more on their data security protocols: <a href="https://azstrut.org/hard-drive-policy/" target="_blank" class="text-blue-600 hover:underline inline-flex items-center gap-1">azstrut.org/hard-drive-policy <i data-lucide="external-link" class="w-3 h-3"></i></a></p>
+                            <p class="italic text-sm text-gray-500">AZstRUT and MCC are not responsible for items placed in the e-Waste bin.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            <span class="font-bold text-gray-800">Can I recycle batteries here?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-600"></i>
+                        </button>
+                        <div class="hidden px-6 pb-5 text-gray-600 leading-relaxed">
+                            No. Please remember to remove all batteries when possible.
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            <span class="font-bold text-gray-800">Can college departments recycle old office equipment?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-600"></i>
+                        </button>
+                        <div class="hidden px-6 pb-5 text-gray-600 leading-relaxed">
+                            No. The AZstRUT community collection bin can not accept any MCC tagged equipment. It is for personal items only. Please contact MCC's IT in order to safely process and recycle all campus-owned equipment.
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            <span class="font-bold text-gray-800">What if I’m not sure whether my item is accepted?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-600"></i>
+                        </button>
+                        <div class="hidden px-6 pb-5 text-gray-600 leading-relaxed">
+                            <p class="mb-3">
+                                Review a complete list of <a href="https://azstrut.org/what-we-take/" target="_blank" class="text-blue-600 hover:underline font-bold inline-flex items-center gap-1">accepted items on the AZstRUT website <i data-lucide="external-link" class="w-3 h-3"></i></a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Learn More & Get Involved</h2>
+                    <div class="h-1 w-20 bg-emerald-500 rounded mx-auto"></div>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- MCC Sustainability Section -->
+                    <div class="bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm">
+                        <div class="flex flex-col md:flex-row gap-10 items-start">
+                            <div class="md:w-2/3">
+                                <h3 class="text-2xl font-bold text-emerald-800 mb-6">MCC Sustainability Resources</h3>
+                                <div class="space-y-4 text-gray-700 leading-relaxed text-lg">
+                                    <p>
+                                        MCC is committed to providing our students and community with sustainable solutions, vibrant learning opportunities and thriving environment.
+                                    </p>
+                                    <p>
+                                        Our campus initiatives focus on reducing waste and fostering a culture of environmental stewardship. Explore our dedicated resources to learn how you can make a tangible impact on our campus ecosystem.
+                                    </p>
+                                    <p class="font-medium text-blue-700">
+                                        See how to get involved: <a href="https://www.mesacc.edu/about/sustainability" target="_blank" class="underline hover:text-blue-800 transition-colors">mesacc.edu/about/sustainability</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/3 w-full space-y-4">
+                                <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-100">
+                                    <h4 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                                        <i data-lucide="library" class="w-5 h-5 text-emerald-600"></i> Opportunities
+                                    </h4>
+                                    <p class="text-sm text-gray-600 mb-4">
+                                        Access our comprehensive <strong>Library Research Guide</strong> and Campus Learning Resources on Recycling and the <strong>Circular Economy</strong>.
+                                    </p>
+                                    <ul class="space-y-3 text-sm text-gray-600 mb-6">
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="book-open" class="w-4 h-4 text-emerald-500"></i> Research Guides
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="leaf" class="w-4 h-4 text-emerald-500"></i> Circular Economy Data
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="graduation-cap" class="w-4 h-4 text-emerald-500"></i> Learning Resources
+                                        </li>
+                                    </ul>
+                                    <a href="https://mesacc.libguides.com/sustainability_studies" target="_blank" class="mt-4 block w-full bg-blue-600 text-white text-center py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">
+                                        Visit the MCC Library Guide
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AZstRUT Section -->
+                    <div class="bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm">
+                        <div class="flex flex-col md:flex-row gap-10 items-start">
+                            <div class="md:w-2/3">
+                                <h3 class="text-2xl font-bold text-emerald-800 mb-6">Supporting STEM Education in Tech</h3>
+                                <div class="space-y-4 text-gray-700 leading-relaxed text-lg">
+                                    <p>
+                                        The community e‑waste collection bin in the MCC Library is offered by the nonprofit organization, <strong>AZstRUT (Arizona Student Recycling Used Technology)</strong> and provides a free, convenient drop‑off point for small electronic devices, accessories, and tech components that are inoperable or no longer needed.
+                                    </p>
+                                    <p>
+                                        AZstRUT supports our community by providing hands-on technical education in cybersecurity, networking and hardware maintenance; free computers for students and free e-Waste recycling on most items.
+                                    </p>
+                                    <p class="text-black font-medium">
+                                        Students can <a href="https://azstrut.org/education/techie-experience/" target="_blank" class="text-blue-600 underline hover:text-blue-800 transition-colors">visit AZstRUT</a> and take a tour, volunteer, gain valuable skills, learn to refurbish tech equipment and more.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/3 w-full space-y-4">
+                                <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-100">
+                                    <h4 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                                        <i data-lucide="users" class="w-5 h-5 text-emerald-600"></i> Opportunities
+                                    </h4>
+                                    <ul class="space-y-3 text-sm text-gray-600">
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Hands-on Volunteering
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Technical Skill Building
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Facility Tours
+                                        </li>
+                                    </ul>
+                                    <a href="https://azstrut.org" target="_blank" class="mt-6 block w-full bg-blue-600 text-white text-center py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">
+                                        Visit AZstRUT.org
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative h-64 w-full overflow-hidden">
+        <!-- Visual content only footer as requested -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                alt="Green nature and technology" 
+                class="w-full h-full object-cover object-bottom scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-emerald-900/40"></div>
+        </div>
+        <!-- Simple border line for definition -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-emerald-500"></div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const navbar = document.getElementById('navbar');
+        const logoText = document.getElementById('logo-text');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.remove('bg-transparent', 'py-4');
+                logoText.classList.add('text-gray-800');
+                logoText.classList.remove('text-white');
+                menuIcon.classList.add('text-gray-800');
+                menuIcon.classList.remove('text-white');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.add('bg-transparent', 'py-4');
+                logoText.classList.remove('text-gray-800');
+                logoText.classList.add('text-white');
+                menuIcon.classList.remove('text-gray-800');
+                menuIcon.classList.add('text-white');
+            }
+        });
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const iconName = mobileMenu.classList.contains('hidden') ? 'menu' : 'x';
+            menuIcon.setAttribute('data-lucide', iconName);
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
